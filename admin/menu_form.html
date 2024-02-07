@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu_form.css">
+    <title>Menu Form</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+    </style>
+<body>
+    <form action="add_menu.php" method="post" enctype="multipart/form-data">
+        <label for="res_id">Restaurant ID:</label>
+        <input type="text" id="res_id" name="res_id" required>
+    
+        <label for="c_id">Category ID:</label>
+        <input type="text" id="c_id" name="c_id" required>
+    
+        <label for="menu_name">Menu Name:</label>
+        <input type="text" id="menu_name" name="menu_name" required>
+    
+        <label for="menu_price">Menu Price:</label>
+        <input type="text" id="menu_price" name="menu_price" required>
+    
+        <label for="menu_description">Menu Description:</label>
+        <textarea id="menu_description" name="menu_description" required></textarea>
+    
+        <label for="menu_date">Menu Date:</label>
+        <input type="date" id="menu_date" name="menu_date" required>
+    
+        <label for="menu_image">Menu Image:</label>
+        <input type="file" id="menu_image" name="menu_image" required>
+    
+        <button type="submit">Add Menu</button>
+    </form>
+</body>
+</html>
